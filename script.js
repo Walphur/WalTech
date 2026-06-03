@@ -26,7 +26,7 @@ const PROYECTOS = [
     icono: "🎮",
     tags: ["JavaScript", "Web", "Gaming"],
     links: [
-      { texto: "Ver demo", url: "https://mcvoficial.com/" },
+      { texto: "Ver sitio", url: "https://mcvoficial.com/" },
       { texto: "Código", url: "https://github.com/Walphur/MCVOFICIAL" },
     ],
   },
@@ -38,7 +38,7 @@ const PROYECTOS = [
     icono: "🏠",
     tags: ["HTML", "CSS"],
     links: [
-      { texto: "Ver demo", url: "https://prietahogar.com.ar/" },
+      { texto: "Ver sitio", url: "https://prietahogar.com.ar/" },
       { texto: "Código", url: "https://github.com/Walphur/prietahogar" },
     ],
   },
@@ -50,7 +50,7 @@ const PROYECTOS = [
     icono: "💧",
     tags: ["JavaScript", "Web"],
     links: [
-      { texto: "Ver demo", url: "https://gluglu-24-7.onrender.com/" },
+      { texto: "Ver sitio", url: "https://gluglu-24-7.onrender.com/" },
       { texto: "Código", url: "https://github.com/Walphur/GLUGLU-24-7" },
     ],
   },
@@ -74,7 +74,7 @@ const PROYECTOS = [
     icono: "📸",
     tags: ["Next.js", "Marketplace", "Supabase"],
     links: [
-      { texto: "Ver demo", url: "https://actionsnap.store/" },
+      { texto: "Ver sitio", url: "https://actionsnap.store/" },
       { texto: "Código", url: "https://github.com/Walphur/ActionSnap" },
     ],
   },
@@ -86,7 +86,7 @@ const PROYECTOS = [
     icono: "🤖",
     tags: ["IA", "SaaS", "Full-stack"],
     links: [
-      { texto: "Ver demo", url: "https://arq-ia.pro" },
+      { texto: "Ver sitio", url: "https://arq-ia.pro" },
       { texto: "Código", url: "https://github.com/Walphur/ARQ-IA" },
     ],
   },
@@ -161,15 +161,12 @@ function crearCard(p) {
 
   return `
     <article class="card">
-      <div class="card__media" data-icon="${p.icono || "📦"}">
+      <div class="card__media">
         ${media}
         <span class="badge badge--${p.estado}">${etiqueta}</span>
       </div>
       <div class="card__body">
-        <div class="card__top">
-          <div class="card__icon">${p.icono || "📦"}</div>
-          <h3 class="card__title">${p.titulo}</h3>
-        </div>
+        <h3 class="card__title">${p.titulo}</h3>
         <p class="card__desc">${p.descripcion}</p>
         <div class="card__tags">${tags}</div>
         ${links ? `<div class="card__links">${links}</div>` : ""}
