@@ -19,51 +19,15 @@ const PERFIL = {
 
 const PROYECTOS = [
   {
-    titulo: "MCV Oficial",
+    titulo: "ARC-IA",
     descripcion:
-      "Plataforma para un clan competitivo de Rust: torneos, tracker de jugadores, streams en vivo y administración.",
+      "SaaS para estudios de arquitectura: cómputo de obra, terrenos e instalaciones con auditoría visual e IA.",
     estado: "completado",
-    icono: "🎮",
-    tags: ["JavaScript", "Web", "Gaming"],
+    icono: "🤖",
+    tags: ["IA", "SaaS", "Full-stack"],
     links: [
-      { texto: "Ver sitio", url: "https://mcvoficial.com/" },
-      { texto: "Código", url: "https://github.com/Walphur/MCVOFICIAL" },
-    ],
-  },
-  {
-    titulo: "PrietaHogar",
-    descripcion:
-      "Sitio web institucional de PrietaHogar, hecho con HTML y CSS.",
-    estado: "completado",
-    icono: "🏠",
-    tags: ["HTML", "CSS"],
-    links: [
-      { texto: "Ver sitio", url: "https://prietahogar.com.ar/" },
-      { texto: "Código", url: "https://github.com/Walphur/prietahogar" },
-    ],
-  },
-  {
-    titulo: "GLUGLU 24/7",
-    descripcion:
-      "Sistema web para una expendedora de agua automática, disponible las 24 horas.",
-    estado: "completado",
-    icono: "💧",
-    tags: ["JavaScript", "Web"],
-    links: [
-      { texto: "Ver sitio", url: "https://gluglu-24-7.onrender.com/" },
-      { texto: "Código", url: "https://github.com/Walphur/GLUGLU-24-7" },
-    ],
-  },
-  {
-    titulo: "Incognito",
-    descripcion:
-      "Juego de fiesta social: descubrí al impostor que no conoce la palabra secreta. Salas online en tiempo real, con modo voz y chat.",
-    estado: "completado",
-    icono: "🕵️",
-    tags: ["Juego", "Multijugador", "Node.js"],
-    links: [
-      { texto: "Jugar", url: "https://incognitogame.online/" },
-      { texto: "Código", url: "https://github.com/Walphur/Impostor-Arcane" },
+      { texto: "Ver sitio", url: "https://arq-ia.pro" },
+      { texto: "Código", url: "https://github.com/Walphur/ARQ-IA" },
     ],
   },
   {
@@ -79,15 +43,51 @@ const PROYECTOS = [
     ],
   },
   {
-    titulo: "ARC-IA",
+    titulo: "Incognito",
     descripcion:
-      "SaaS para estudios de arquitectura: cómputo de obra, terrenos e instalaciones con auditoría visual e IA.",
+      "Juego de fiesta social: descubrí al impostor que no conoce la palabra secreta. Salas online en tiempo real, con modo voz y chat.",
     estado: "completado",
-    icono: "🤖",
-    tags: ["IA", "SaaS", "Full-stack"],
+    icono: "🕵️",
+    tags: ["Juego", "Multijugador", "Node.js"],
     links: [
-      { texto: "Ver sitio", url: "https://arq-ia.pro" },
-      { texto: "Código", url: "https://github.com/Walphur/ARQ-IA" },
+      { texto: "Jugar", url: "https://incognitogame.online/" },
+      { texto: "Código", url: "https://github.com/Walphur/Impostor-Arcane" },
+    ],
+  },
+  {
+    titulo: "MCV Oficial",
+    descripcion:
+      "Plataforma para un clan competitivo de Rust: torneos, tracker de jugadores, streams en vivo y administración.",
+    estado: "completado",
+    icono: "🎮",
+    tags: ["JavaScript", "Web", "Gaming"],
+    links: [
+      { texto: "Ver sitio", url: "https://mcvoficial.com/" },
+      { texto: "Código", url: "https://github.com/Walphur/MCVOFICIAL" },
+    ],
+  },
+  {
+    titulo: "GLUGLU 24/7",
+    descripcion:
+      "Sistema web para una expendedora de agua automática, disponible las 24 horas.",
+    estado: "completado",
+    icono: "💧",
+    tags: ["JavaScript", "Web"],
+    links: [
+      { texto: "Ver sitio", url: "https://gluglu-24-7.onrender.com/" },
+      { texto: "Código", url: "https://github.com/Walphur/GLUGLU-24-7" },
+    ],
+  },
+  {
+    titulo: "PrietaHogar",
+    descripcion:
+      "Sitio web institucional de PrietaHogar, hecho con HTML y CSS.",
+    estado: "completado",
+    icono: "🏠",
+    tags: ["HTML", "CSS"],
+    links: [
+      { texto: "Ver sitio", url: "https://prietahogar.com.ar/" },
+      { texto: "Código", url: "https://github.com/Walphur/prietahogar" },
     ],
   },
   {
@@ -156,7 +156,7 @@ function crearCard(p) {
 
   const preview = obtenerPreview(p);
   const media = preview
-    ? `<img class="card__img" src="${preview}" alt="Vista previa de ${p.titulo}" loading="lazy" onerror="this.remove();" />`
+    ? `<img class="card__img" src="${preview}" alt="Vista previa de ${p.titulo}" loading="lazy" onload="this.classList.add('is-loaded')" onerror="this.remove();" />`
     : "";
 
   return `

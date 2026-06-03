@@ -1,0 +1,25 @@
+name: Keep Render awake
+
+# Mantiene despiertos los sitios alojados en el plan gratis de Render
+# haciendo un "ping" cada 10 minutos para que no se duerman.
+
+on:
+  schedule:
+    - cron: "*/10 * * * *"
+  workflow_dispatch: {}
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ping sitios
+        run: |
+          urls=(
+            "https://gluglu-24-7.onrender.com/"
+            "https://actionsnap.store/"
+            "https://incognitogame.online/"
+          )
+          for url in "${urls[@]}"; do
+            echo "Pinging $url"
+            curl -m 60 -s -o /dev/null -w "%{http_code}\n" "$url" || echo "fallo (se reintenta luego)"
+          done
