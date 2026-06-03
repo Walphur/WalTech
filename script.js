@@ -13,7 +13,7 @@ const PERFIL = {
   skills: ["JavaScript", "TypeScript", "React / Next.js", "Node.js", "HTML / CSS", "Supabase"],
   contactos: [
     { texto: "GitHub", url: "https://github.com/Walphur" },
-    { texto: "Email", url: "mailto:tucorreo@ejemplo.com" },
+    { texto: "Email", url: "mailto:juancruz.gagliano@gmail.com" },
   ],
 };
 
@@ -90,6 +90,33 @@ const PROYECTOS = [
       { texto: "Código", url: "https://github.com/Walphur/ARQ-IA" },
     ],
   },
+  {
+    titulo: "Apps para kioscos y comercios",
+    descripcion:
+      "Punto de venta, control de stock y caja para kioscos y negocios de barrio. En camino.",
+    estado: "proximo",
+    icono: "🏪",
+    tags: ["Negocios", "Punto de venta"],
+    links: [],
+  },
+  {
+    titulo: "Gestión para clínicas y consultorios",
+    descripcion:
+      "Turnos, historias clínicas y administración para clínicas y consultorios médicos. En camino.",
+    estado: "proximo",
+    icono: "🏥",
+    tags: ["Salud", "Turnos"],
+    links: [],
+  },
+  {
+    titulo: "Soluciones para el sector público",
+    descripcion:
+      "Sistemas a medida para hospitales, municipios y organismos de gobierno. En camino.",
+    estado: "proximo",
+    icono: "🏛️",
+    tags: ["Gobierno", "A medida"],
+    links: [],
+  },
 ];
 
 /* =====================================================================
@@ -100,6 +127,17 @@ const grid = document.getElementById("projectGrid");
 const emptyState = document.getElementById("emptyState");
 const filtersEl = document.getElementById("filters");
 let filtroActual = "todos";
+
+function obtenerPreview(p) {
+  if (p.imagen) return p.imagen;
+  const demo = (p.links || []).find(
+    (l) => l.url && l.url.trim() !== "" && !l.url.includes("github.com")
+  );
+  if (!demo) return null;
+  return `https://s0.wp.com/mshots/v1/${encodeURIComponent(
+    demo.url
+  )}?w=640&h=400`;
+}
 
 function crearCard(p) {
   const links = (p.links || [])
@@ -116,16 +154,26 @@ function crearCard(p) {
 
   const etiqueta = p.estado === "completado" ? "Completado" : "Próximo";
 
+  const preview = obtenerPreview(p);
+  const media = preview
+    ? `<img class="card__img" src="${preview}" alt="Vista previa de ${p.titulo}" loading="lazy" onerror="this.remove();" />`
+    : "";
+
   return `
     <article class="card">
-      <div class="card__top">
-        <div class="card__icon">${p.icono || "📦"}</div>
+      <div class="card__media" data-icon="${p.icono || "📦"}">
+        ${media}
         <span class="badge badge--${p.estado}">${etiqueta}</span>
       </div>
-      <h3 class="card__title">${p.titulo}</h3>
-      <p class="card__desc">${p.descripcion}</p>
-      <div class="card__tags">${tags}</div>
-      ${links ? `<div class="card__links">${links}</div>` : ""}
+      <div class="card__body">
+        <div class="card__top">
+          <div class="card__icon">${p.icono || "📦"}</div>
+          <h3 class="card__title">${p.titulo}</h3>
+        </div>
+        <p class="card__desc">${p.descripcion}</p>
+        <div class="card__tags">${tags}</div>
+        ${links ? `<div class="card__links">${links}</div>` : ""}
+      </div>
     </article>
   `;
 }
