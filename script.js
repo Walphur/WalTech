@@ -136,7 +136,7 @@ function obtenerPreview(p) {
   if (!demo) return null;
   return `https://s0.wp.com/mshots/v1/${encodeURIComponent(
     demo.url
-  )}?w=640&h=400`;
+  )}?w=1024&h=640`;
 }
 
 function crearCard(p) {
