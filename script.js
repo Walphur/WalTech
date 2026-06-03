@@ -36,6 +36,8 @@ const PROYECTOS = [
       "Marketplace de fotografía deportiva: encontrá tus fotos por dorsal y compralas en HD al instante.",
     estado: "completado",
     icono: "📸",
+    imagen:
+      "https://s0.wp.com/mshots/v1/https%3A%2F%2Factionsnap.store%2F?w=1200&h=750",
     tags: ["Next.js", "Marketplace", "Supabase"],
     links: [
       { texto: "Ver sitio", url: "https://actionsnap.store/" },
@@ -72,6 +74,8 @@ const PROYECTOS = [
       "Sistema web para una expendedora de agua automática, disponible las 24 horas.",
     estado: "completado",
     icono: "💧",
+    imagen:
+      "https://s0.wp.com/mshots/v1/https%3A%2F%2Fgluglu-24-7.onrender.com%2F?w=1200&h=750",
     tags: ["JavaScript", "Web"],
     links: [
       { texto: "Ver sitio", url: "https://gluglu-24-7.onrender.com/" },
