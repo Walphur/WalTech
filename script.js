@@ -10,7 +10,7 @@
 
 const PERFIL = {
   nombre: "Waltech",
-  skills: ["HTML", "CSS", "JavaScript", "TypeScript", "Diseño web"],
+  skills: ["JavaScript", "TypeScript", "React / Next.js", "Node.js", "HTML / CSS", "Supabase"],
   contactos: [
     { texto: "GitHub", url: "https://github.com/Walphur" },
     { texto: "Email", url: "mailto:tucorreo@ejemplo.com" },
@@ -21,12 +21,12 @@ const PROYECTOS = [
   {
     titulo: "MCV Oficial",
     descripcion:
-      "Sitio web oficial de MCV, desarrollado y desplegado online.",
+      "Plataforma para un clan competitivo de Rust: torneos, tracker de jugadores, streams en vivo y administración.",
     estado: "completado",
-    icono: "🌐",
-    tags: ["JavaScript", "Web"],
+    icono: "🎮",
+    tags: ["JavaScript", "Web", "Gaming"],
     links: [
-      { texto: "Ver demo", url: "https://mcvoficial.vercel.app" },
+      { texto: "Ver demo", url: "https://mcvoficial.com/" },
       { texto: "Código", url: "https://github.com/Walphur/MCVOFICIAL" },
     ],
   },
@@ -38,7 +38,7 @@ const PROYECTOS = [
     icono: "🏠",
     tags: ["HTML", "CSS"],
     links: [
-      { texto: "Ver demo", url: "https://walphur.github.io/prietahogar/" },
+      { texto: "Ver demo", url: "https://prietahogar.com.ar/" },
       { texto: "Código", url: "https://github.com/Walphur/prietahogar" },
     ],
   },
@@ -50,7 +50,7 @@ const PROYECTOS = [
     icono: "💧",
     tags: ["JavaScript", "Web"],
     links: [
-      { texto: "Ver demo", url: "https://walphur.github.io/GLUGLU-24-7/" },
+      { texto: "Ver demo", url: "https://gluglu-24-7.onrender.com/" },
       { texto: "Código", url: "https://github.com/Walphur/GLUGLU-24-7" },
     ],
   },
@@ -69,11 +69,12 @@ const PROYECTOS = [
   {
     titulo: "ActionSnap",
     descripcion:
-      "Aplicación web construida con Next.js y Supabase.",
+      "Marketplace de fotografía deportiva: encontrá tus fotos por dorsal y compralas en HD al instante.",
     estado: "completado",
     icono: "📸",
-    tags: ["Next.js", "TypeScript", "Supabase"],
+    tags: ["Next.js", "Marketplace", "Supabase"],
     links: [
+      { texto: "Ver demo", url: "https://actionsnap.store/" },
       { texto: "Código", url: "https://github.com/Walphur/ActionSnap" },
     ],
   },
