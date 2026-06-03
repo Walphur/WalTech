@@ -10,53 +10,84 @@
 
 const PERFIL = {
   nombre: "Waltech",
-  skills: ["HTML", "CSS", "JavaScript", "Diseño web", "Ideas nuevas"],
+  skills: ["HTML", "CSS", "JavaScript", "TypeScript", "Diseño web"],
   contactos: [
+    { texto: "GitHub", url: "https://github.com/Walphur" },
     { texto: "Email", url: "mailto:tucorreo@ejemplo.com" },
-    { texto: "GitHub", url: "https://github.com/tuusuario" },
-    { texto: "LinkedIn", url: "https://linkedin.com/in/tuusuario" },
   ],
 };
 
 const PROYECTOS = [
   {
-    titulo: "Mi primer proyecto",
+    titulo: "MCV Oficial",
     descripcion:
-      "Una breve descripción de qué hace este proyecto y por qué lo construiste.",
+      "Sitio web oficial de MCV, desarrollado y desplegado online.",
     estado: "completado",
-    icono: "🚀",
-    tags: ["HTML", "CSS", "JavaScript"],
+    icono: "🌐",
+    tags: ["JavaScript", "Web"],
     links: [
-      { texto: "Ver demo", url: "" },
-      { texto: "Código", url: "" },
+      { texto: "Ver demo", url: "https://mcvoficial.vercel.app" },
+      { texto: "Código", url: "https://github.com/Walphur/MCVOFICIAL" },
     ],
   },
   {
-    titulo: "App de tareas",
+    titulo: "PrietaHogar",
     descripcion:
-      "Una aplicación simple para organizar tareas del día a día con recordatorios.",
+      "Sitio web institucional de PrietaHogar, hecho con HTML y CSS.",
     estado: "completado",
-    icono: "✅",
-    tags: ["JavaScript", "LocalStorage"],
-    links: [{ texto: "Ver demo", url: "" }],
+    icono: "🏠",
+    tags: ["HTML", "CSS"],
+    links: [
+      { texto: "Ver demo", url: "https://walphur.github.io/prietahogar/" },
+      { texto: "Código", url: "https://github.com/Walphur/prietahogar" },
+    ],
   },
   {
-    titulo: "Tienda online",
+    titulo: "GLUGLU 24/7",
     descripcion:
-      "Un proyecto que estoy planeando: una tienda con carrito y pagos.",
-    estado: "proximo",
-    icono: "🛒",
-    tags: ["React", "Pagos"],
-    links: [],
+      "Sistema web para una expendedora de agua automática, disponible las 24 horas.",
+    estado: "completado",
+    icono: "💧",
+    tags: ["JavaScript", "Web"],
+    links: [
+      { texto: "Ver demo", url: "https://walphur.github.io/GLUGLU-24-7/" },
+      { texto: "Código", url: "https://github.com/Walphur/GLUGLU-24-7" },
+    ],
   },
   {
-    titulo: "Juego web",
+    titulo: "Incognito",
     descripcion:
-      "Próximamente: un mini juego en el navegador para practicar lógica.",
-    estado: "proximo",
-    icono: "🎮",
-    tags: ["Canvas", "JavaScript"],
-    links: [],
+      "Juego de fiesta social: descubrí al impostor que no conoce la palabra secreta. Salas online en tiempo real, con modo voz y chat.",
+    estado: "completado",
+    icono: "🕵️",
+    tags: ["Juego", "Multijugador", "Node.js"],
+    links: [
+      { texto: "Jugar", url: "https://incognitogame.online/" },
+      { texto: "Código", url: "https://github.com/Walphur/Impostor-Arcane" },
+    ],
+  },
+  {
+    titulo: "ActionSnap",
+    descripcion:
+      "Aplicación web construida con Next.js y Supabase.",
+    estado: "completado",
+    icono: "📸",
+    tags: ["Next.js", "TypeScript", "Supabase"],
+    links: [
+      { texto: "Código", url: "https://github.com/Walphur/ActionSnap" },
+    ],
+  },
+  {
+    titulo: "ARC-IA",
+    descripcion:
+      "SaaS para estudios de arquitectura: cómputo de obra, terrenos e instalaciones con auditoría visual e IA.",
+    estado: "completado",
+    icono: "🤖",
+    tags: ["IA", "SaaS", "Full-stack"],
+    links: [
+      { texto: "Ver demo", url: "https://arq-ia.pro" },
+      { texto: "Código", url: "https://github.com/Walphur/ARQ-IA" },
+    ],
   },
 ];
 
