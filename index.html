@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portafolio de proyectos — los que hice y los que vendrán." />
+  <title>Waltech — Portafolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Fondo decorativo -->
+  <div class="bg-glow" aria-hidden="true"></div>
+
+  <!-- Barra de navegación -->
+  <header class="nav">
+    <a href="#inicio" class="nav__logo">Wal<span>tech</span></a>
+    <nav class="nav__links">
+      <a href="#proyectos">Proyectos</a>
+      <a href="#sobre-mi">Sobre mí</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+    <button class="nav__theme" id="themeToggle" aria-label="Cambiar tema" title="Cambiar tema">🌙</button>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero" id="inicio">
+    <p class="hero__eyebrow">Bienvenido a mi espacio</p>
+    <h1 class="hero__title">
+      Hola, soy <span class="grad">Waltech</span>.<br />
+      Construyo cosas y las muestro acá.
+    </h1>
+    <p class="hero__subtitle">
+      Una colección de los proyectos que ya terminé y los que están por venir.
+      Simple, claro y siempre creciendo.
+    </p>
+    <div class="hero__actions">
+      <a href="#proyectos" class="btn btn--primary">Ver proyectos</a>
+      <a href="#contacto" class="btn btn--ghost">Contactame</a>
+    </div>
+    <div class="hero__stats" id="heroStats"></div>
+  </section>
+
+  <!-- Proyectos -->
+  <section class="section" id="proyectos">
+    <div class="section__head">
+      <h2 class="section__title">Proyectos</h2>
+      <p class="section__desc">Filtrá entre lo que ya está listo y lo que viene.</p>
+    </div>
+
+    <div class="filters" id="filters">
+      <button class="filter is-active" data-filter="todos">Todos</button>
+      <button class="filter" data-filter="completado">Completados</button>
+      <button class="filter" data-filter="proximo">Próximos</button>
+    </div>
+
+    <div class="grid" id="projectGrid"></div>
+    <p class="empty" id="emptyState" hidden>No hay proyectos en esta categoría todavía.</p>
+  </section>
+
+  <!-- Sobre mí -->
+  <section class="section section--about" id="sobre-mi">
+    <div class="about">
+      <div class="about__text">
+        <h2 class="section__title">Sobre mí</h2>
+        <p>
+          Acá podés contar un poco quién sos, qué te gusta hacer y qué tipo de
+          proyectos disfrutás. Cambiá este texto por tu propia historia.
+        </p>
+        <ul class="about__tags" id="skills"></ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contacto -->
+  <section class="section section--contact" id="contacto">
+    <h2 class="section__title">Hablemos</h2>
+    <p class="section__desc">¿Tenés una idea o querés trabajar juntos? Escribime.</p>
+    <div class="contact__links" id="contactLinks"></div>
+  </section>
+
+  <footer class="footer">
+    <p>Hecho con cariño · <span id="year"></span></p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
